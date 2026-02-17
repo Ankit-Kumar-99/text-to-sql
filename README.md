@@ -1,22 +1,4 @@
-Perfect. Below is a **production-grade README.md** for your project.
 
-It includes:
-
-* ✅ System overview
-* ✅ Architecture explanation
-* ✅ End-to-end flow
-* ✅ Design decisions
-* ✅ Prompting strategy
-* ✅ Validation strategy
-* ✅ Limitations
-* ✅ Scalability roadmap
-* ✅ Diagram (ASCII architecture + flow diagram)
-* ✅ How to run
-* ✅ Future improvements
-
-You can copy this directly into `README.md`.
-
----
 
 # 📊 NL2SQL Marketing Analytics Engine
 
