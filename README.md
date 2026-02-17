@@ -416,14 +416,3 @@ This system is:
 
 It moves beyond a toy NL2SQL script into a structured analytics engine.
 
----
-
-If you want, I can next provide:
-
-* 📊 A clean PNG architecture diagram
-* 🧠 A diagnostic intent upgrade
-* 🚀 FastAPI version
-* 🧪 Evaluation benchmark suite
-* 📦 Dockerized production setup
-
-Let me know the direction you want to take.
