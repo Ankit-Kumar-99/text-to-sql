@@ -303,65 +303,8 @@ python main.py
 
 ---
 
-# 📈 Current Accuracy
 
-| Query Type           | Accuracy |
-| -------------------- | -------- |
-| Simple Aggregation   | ~95%     |
-| Multi-table joins    | ~85–90%  |
-| Time-based queries   | ~75–85%  |
-| Diagnostic questions | Limited  |
 
----
-
-# ⚠️ Known Limitations
-
-* No automatic comparison logic (week-over-week)
-* No diagnostic reasoning engine
-* No query execution layer
-* No cost-based optimization
-* No ambiguity detection ("best", "top")
-
----
-
-# 🛣 Future Roadmap
-
-## Phase 1 – Intelligence Improvements
-
-* Diagnostic intent detection
-* Automatic time comparison templates
-* Purchase-event auto filtering
-* Funnel conversion logic
-
-## Phase 2 – Engineering Improvements
-
-* Add FastAPI backend
-* Add caching
-* Add logging system
-* Add query benchmarking framework
-* Add test harness
-
-## Phase 3 – Enterprise Features
-
-* Role-based access
-* Multi-database support
-* Semantic metric layer
-* Attribution modeling
-* Auto BI insights
-
----
-
-# 🔬 Example Queries Supported
-
-* Total spend by campaign
-* Revenue per click
-* Sessions last week
-* Email events vs conversions
-* Campaign performance filters
-* Device-level revenue
-* ROAS by campaign
-
----
 
 # 🧠 Why Two-Stage NL2SQL?
 
