@@ -6,10 +6,16 @@ from app.schema import TABLE_SCHEMAS
 from app.validator import validate_sql
 
 
-def clean_sql_output(sql_text):
+def clean_sql_output(sql_text: str) -> str:
     sql_text = re.sub(r"```sql", "", sql_text, flags=re.IGNORECASE)
     sql_text = re.sub(r"```", "", sql_text)
     return sql_text.strip()
+
+
+def clean_json_output(json_text: str) -> str:
+    json_text = re.sub(r"```json", "", json_text, flags=re.IGNORECASE)
+    json_text = re.sub(r"```", "", json_text)
+    return json_text.strip()
 
 
 def generate_sql(question: str):
@@ -18,8 +24,9 @@ def generate_sql(question: str):
     intent_raw = generate_response(intent_prompt(question))
 
     try:
-        intent_json = json.loads(intent_raw)
-    except:
+        intent_clean = clean_json_output(intent_raw)
+        intent_json = json.loads(intent_clean)
+    except Exception:
         print("❌ Intent JSON parsing failed")
         print(intent_raw)
         return None
@@ -29,7 +36,11 @@ def generate_sql(question: str):
 
     print("\n🛠 Generating SQL...")
     sql_raw = generate_response(
-        sql_prompt(question, json.dumps(intent_json, indent=2), TABLE_SCHEMAS)
+        sql_prompt(
+            question,
+            json.dumps(intent_json, indent=2),
+            TABLE_SCHEMAS
+        )
     )
 
     sql_clean = clean_sql_output(sql_raw)
